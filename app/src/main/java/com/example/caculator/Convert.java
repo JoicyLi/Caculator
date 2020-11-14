@@ -30,14 +30,15 @@ public class Convert extends AppCompatActivity {
         btn_eq = (Button) findViewById(R.id.btn_eq);
         btn_clr = (Button) findViewById(R.id.btn_clr);
         btn_del = (Button) findViewById(R.id.btn_del);
+
         btn_m=(Button)findViewById(R.id.btn_m);
         btn_m.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 String s = et_m.getText().toString();
                 double b=Double.parseDouble(s);
-                double c=b*0.1;
-                double d=b*0.01;
+                double c=b*10;
+                double d=b*100;
                 et_dm.setText(String.valueOf(c));
                 et_cm.setText(String.valueOf(d));
 
@@ -51,8 +52,8 @@ public class Convert extends AppCompatActivity {
             public void onClick(View view) {
                 String s = et_dm.getText().toString();
                 double b=Double.parseDouble(s);
-                double c=b*10;
-                double d=b*0.1;
+                double c=b*0.1;
+                double d=b*10;
                 et_m.setText(String.valueOf(c));
                 et_cm.setText(String.valueOf(d));
 
@@ -66,8 +67,8 @@ public class Convert extends AppCompatActivity {
             public void onClick(View view) {
                 String s = et_cm.getText().toString();
                 double b=Double.parseDouble(s);
-                double c=b*100;
-                double d=b*10;
+                double c=b*0.01;
+                double d=b*0.1;
                 et_m.setText(String.valueOf(c));
                 et_dm.setText(String.valueOf(d));
 
@@ -81,8 +82,8 @@ public class Convert extends AppCompatActivity {
             public void onClick(View view) {
                 String s = et_m3.getText().toString();
                 double b=Double.parseDouble(s);
-                double c=b*0.001;
-                double d=b*0.000001;
+                double c=b*1000;
+                double d=b*1000000;
                 et_dm3.setText(String.valueOf(c));
                 et_cm3.setText(String.valueOf(d));
 
@@ -96,8 +97,8 @@ public class Convert extends AppCompatActivity {
             public void onClick(View view) {
                 String s = et_dm3.getText().toString();
                 double b=Double.parseDouble(s);
-                double c=b*1000;
-                double d=b*0.001;
+                double c=b*0.001;
+                double d=b*1000;
                 et_m3.setText(String.valueOf(c));
                 et_cm3.setText(String.valueOf(d));
 
@@ -111,8 +112,8 @@ public class Convert extends AppCompatActivity {
             public void onClick(View view) {
                 String s = et_cm3.getText().toString();
                 double b=Double.parseDouble(s);
-                double c=b*1000000;
-                double d=b*1000;
+                double c=b*0.000001;
+                double d=b*0.001;
                 et_m3.setText(String.valueOf(c));
                 et_dm3.setText(String.valueOf(d));
 

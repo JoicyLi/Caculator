@@ -169,12 +169,6 @@ public class MainActivity extends AppCompatActivity {
                 textView.setText(a);
             }
         });
-        btn_div.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                textView.setText(textView.getText().toString() + "/");
-            }
-        });
         btn_eq.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -213,6 +207,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 textView.setText(textView.getText().toString() + "+");
+            }
+        });
+        btn_div.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textView.setText(textView.getText().toString() + "/");
             }
         });
         btn_pt.setOnClickListener(new View.OnClickListener() {
@@ -297,7 +297,8 @@ public class MainActivity extends AppCompatActivity {
                         double num = 3.14;
                         numberStack.push(num);
                         temp = new StringBuffer();
-                    } else {
+                    }
+                    else {
                         double num = Double.parseDouble(tempStr);
                         numberStack.push(num);
                         temp = new StringBuffer();
